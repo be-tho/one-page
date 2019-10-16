@@ -1,3 +1,169 @@
-body{
-    background:peru;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background: purple;
+
+    /* El darle el mismo alto que alto de línea al header logramos que el texto de la h1 quede centrado. Al ajustar el alto al header el nav no entrará pero no es problema ya que lo vamos a trabajar con posicionamiento. */
+
+    height: 4em;
+    line-height: 4em;
+    text-align: center;
+    color: white;
+}
+h1{
+    background: url(../img/logo.png) no-repeat center center;
+}
+h2 {
+    margin-bottom: 1em;
+}
+
+p {
+    margin-bottom: 1em;
+    line-height: 1.5em;
+}
+
+section {
+    padding: 1.25em;
+}
+
+/* Para que no se apliquen las reglas para el botón hamburguesa en pc las ponemos dentro de una consulta max-width que afecte solo a celular y tablet. */
+
+@media screen and (max-width: 991px) {
+
+    /* El nav ocupa todo el ancho del body y se posiciona absoluto en el vértice superior izquierdo de la ventana. */
+
+    nav {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    /* Sacamos la viñeta del botón y el texto (del vínculo) para que solo se vea la imagen de la hamburguesa que tendrán como fondo los vínculos. Vamos a generar un botón cuadrado con em como unidad de medida para que pueda agrandarse o achicarse dependiendo de la decisión del usuario en cuanto al tamaño de fuente por default de su browser. Ese tamaño será de 2.5em x 2.5em, entonces como el alto del header es 4em le damos un margen superior de 0.75em para que quede centrado verticalmente. El alto se lo damos al vínculo ya que hará crecer por default al li pero el ancho lo damos acá para limitar el ancho del vínculo que trabajará en bloque en su interior. */
+
+    #hamburguesa li {
+        list-style: none;
+        text-indent: -100px;
+        overflow: hidden;
+        margin-top: .75em;
+        width: 2.5em;
+    }
+
+    /* El vínculo es la "cara visible" del botón, por lo que es el que lleva la img de fondo de la hamburguesa. En este caso se lo aplicamos a ambos botones (abrir y cerrar) aunque podrían tener una distinta cada uno (la X de cierre, por ejemplo). Con background-cover hacemos que la img cubra completamente el fondo del botón ya sea que se agranda o achica. */
+
+    #hamburguesa li a {
+        background: url("../img/menu.png") no-repeat center center;
+        background-size: cover;
+        display: block;
+        height: 2.5em;
+    }
+
+    /* Ocultamos el botón cerrar. */
+
+    #hamburguesa li:last-child {
+        display: none;
+    }
+
+    /* Con el nav el target (presionamos el botón abrir de hamburguesa), hacemos "entrar" la barra de navegación al cambiar el valor de left a cero. También ocultamos el botón abrir y mostramos el de cerrar. */
+
+    nav:target #barra {
+        left: 0;
+    }
+
+    nav:target #hamburguesa li:first-child {
+        display: none;
+    }
+
+    nav:target #hamburguesa li:last-child {
+        display: block;
+    }
+}
+
+/* Por fuera de la query para mobile de la hamburguesa aplicamos el estilo de la barra ya que luego muchas de estas propiedades las usaremos en pc. Ajustamos el tamaño de la barra de navegación (todo el ancho del body el el alto disponible del viewport que es el 100vh menos el alto de 4em del header). Lo posicionamos absoluta para poder ajustar la propiedad left para desplazarla y que no quede como una tapa invisible del contenido si estuviera relative o static. Desplazamos el alto del header desde el top para que no tape al botón de cierre. Por último, le damos un left negativo del mismo ancho de viewport para sacarla de la pantalla y le aplicamos un efecto de entrada y salida. */
+
+#barra {
+    width: 100%;
+    height: calc(100vh - 4em);
+    position: absolute;
+    top: 4em;
+    left: -100%;
+    background: #F36;
+    transition: left .5s ease;
+}
+
+/* Ajustamos el estilo de los botones de la barra. */
+
+#barra li {
+    list-style: none;
+    margin: 1em;
+    width: 90%;
+    display: inline-block;
+}
+
+#barra li a {
+    text-decoration: none;
+    display: block;
+    background: #F9F;
+    color: black;
+    text-align: center;
+    line-height: 2em;
+}
+
+/* Estilos para pc. */
+
+@media screen and (min-width: 992px) {
+
+    /* Ocultamos la hamburguesa ya que mostraremos solo la barra. */
+
+    #hamburguesa {
+        display: none;
+    }
+
+    /* Reseteamos el alto del header que le dimos en mobile para que crezca ahora de acuerdo a su contenido como cualquier caja de bloque. */
+
+    header {
+        height: auto;
+        max-width: 1100px;
+        margin: auto;
+    }
+
+    section {
+        max-width: 1100px;
+        margin: auto;
+    }
+
+    /* Ahora queremos el nav y el logo en línea, para ello los ponemos inline-block y los centramos verticalmente para que no desequilibren por diferencia de contenido. Al menú le damos un ancho para que entren los botones en línea dentro. No es necesario quitarle el position absolute ya que se lo dimos dentro de la consulta de mobile que no se aplica ahora. */
+
+    h1 {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    #menu {
+        display: inline-block;
+        width: 70%;
+        vertical-align: middle;
+    }
+
+    /* Cambiamos el posicionamiento de la barra de absoluto a static (flujo normal o natural) para que ocupe su lugar dentro del nav, también reseteamos el alto que le dimos en mobile para que ocupe toda la pantalla disponible allí y alineamos el texto a la derecha para correr los botones hacia ese costado. Por último, quitamos el color de fondo para que los botones se integren al header. */
+
+    #barra {
+        position: static;
+        height: auto;
+        text-align: right;
+        background: none;
+    }
+
+    /* Ajustamos un nuevo tamaño para los botones en px para que se ubiquen en línea (ya tenían aplicado el display inline-block en mobile para que los podamos poner en línea ahora). También les reseteamos el margen vertical que antes nos servía para separar los botones apilados. Corregimos la alineación del texto de los botones para que no queden a la derecha. */
+
+    #barra li {
+        width: 130px;
+        margin: 0 1em;
+        text-align: center;
+    }
 }
