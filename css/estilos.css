@@ -57,7 +57,7 @@ figure > img{
 /* En este ejemplo cambiamos el efecto de apertura, en vez de manejar el left cambiamos el alto de la caja, cuando está cerrada la barra su alto será cero y cuando está abierta el mismo alto que tenía en el ejemplo anterior. Lo único que tenemos que tener en cuentra es que si la ul tiene alto cero los botones se verán igual excediendo el alto de la caja, por lo que los ocultamos con la propiedad overflow. */
 
 nav:target #barra {
-    height: calc(100vh - 4em);
+    height: calc(100vh - 2em);
 }
 
 nav:target #hamburguesa li:first-child {
@@ -90,7 +90,8 @@ nav:target #hamburguesa li:last-child {
     background: #eef0c9;
     color: #5c8b3b;
     text-align: center;
-    line-height: 2em;
+    font-size: 16px;
+    line-height: 3em;
     border-radius: 10px;
     font-weight: 500;
 }
