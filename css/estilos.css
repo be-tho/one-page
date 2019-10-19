@@ -5,20 +5,27 @@
 }
 
 header {
-    background: purple;
+    background: #ffffff;
     height: 5em;
     line-height: 6em;
     text-align: center;
     color: white;
 }
+body{
+    font-family: 'Montserrat', sans-serif;
+}
 h1{
-    background: url(../img/logo-white.png) no-repeat;
+    background: url(../img/logo-blue.png) no-repeat;
     background-position-x: center;
-    width: 96px;
-    height: 78px;
+    width: 126px;
+    height: 100px;
     font-size: 0;
     margin: 0 auto;
 }
+figure>img{
+    width: 100vw;
+}
+
 h2 {
     margin-bottom: 1em;
 }
@@ -27,9 +34,22 @@ p {
     margin-bottom: 1em;
     line-height: 1.5em;
 }
-
-section {
+.banner{
+    padding: 0;
+}
+section{
     padding: 1.25em;
+}
+.trabajando{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; 
+}
+.trabajando > div{
+    width: 80vw;
+    text-align: center;
+    padding:2em;
 }
 
 @media screen and (max-width: 991px) {
@@ -50,7 +70,7 @@ section {
     }
 
     #hamburguesa li a {
-        background: url("../img/menu.png") no-repeat center center;
+        background: url("../img/menu-3.png") no-repeat center center;
         background-size: cover;
         display: block;
         height: 1.5em;
@@ -63,7 +83,7 @@ section {
     /* En este ejemplo cambiamos el efecto de apertura, en vez de manejar el left cambiamos el alto de la caja, cuando estÃƒÂ¡ cerrada la barra su alto serÃƒÂ¡ cero y cuando estÃƒÂ¡ abierta el mismo alto que tenÃƒÂ­a en el ejemplo anterior. Lo ÃƒÂºnico que tenemos que tener en cuentra es que si la ul tiene alto cero los botones se verÃƒÂ¡n igual excediendo el alto de la caja, por lo que los ocultamos con la propiedad overflow. */
 
     nav:target #barra {
-        height: calc(100vh - 4em);
+        height: calc(100vh - 14em);
     }
 
     nav:target #hamburguesa li:first-child {
@@ -81,7 +101,7 @@ section {
     overflow: hidden;
     position: absolute;
     top: 5em;
-    background: #F36;
+    background: #adc557;
     transition: height .5s ease;
 }
 
@@ -95,12 +115,18 @@ section {
 #barra li a {
     text-decoration: none;
     display: block;
-    background: #F9F;
-    color: black;
+    background: #eef0c9;
+    color: #5c8b3b;
     text-align: center;
-    line-height: 2em;
+    font-size: 25px;
+    line-height: 3em;
+    border-radius: 10px;
+    font-weight: 500;
 }
-
+#barra li a:hover{
+    background: #5c8b3b;
+    color: #eef0c9;
+}
 /* Estilos para pc. */
 
 @media screen and (min-width: 992px) {
