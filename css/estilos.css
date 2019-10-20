@@ -47,14 +47,14 @@ section {
 .trabajando > article {
     background: #ffffff;
     text-align: center;
-    padding: 40px 20px;
+    padding: 2.5em 2em;
     width: 80vw;
-    margin: 20px auto;
+    margin: 2em auto;
 }
 .trabajando > article:hover {
     box-shadow: 0 0 2px 0px;
     transition: 0.6s;
-    border-radius: 5px;
+    border-radius: 0.5em;
 }
 
 #hamburguesa li {
