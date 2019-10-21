@@ -45,7 +45,7 @@ section {
     background: #ffffff;
     text-align: center;
     padding: 2.5em 2em;
-    width: 80vw;
+    width: 85vw;
     margin: 2em auto;
 }
 .trabajando > article:hover {
@@ -53,7 +53,27 @@ section {
     transition: 0.6s;
     border-radius: 0.5em;
 }
-
+.projectos{
+    background: #fffdf4;
+    text-align: center;
+}
+.projectos > article{
+    width: 85vw;
+    box-shadow: #cecece 0 0 2px 0px;
+    margin: 1.5em auto;
+    text-align: center;
+}
+.projectos img{
+    width: 100%;
+}
+.projectos h3{
+    font-size: 1.4em;
+    padding-top: 0.5em;
+}
+.projectos figcaption{
+    padding: 0.8em;
+}
+}
 #hamburguesa li {
     list-style: none;
     text-indent: -100px;
