@@ -181,12 +181,12 @@ nav:target #hamburguesa li:last-child {
 .boton:hover{
     cursor: pointer;
     filter: hue-rotate(90deg);
-    /* filter: contrast(175%) brightness(3%); */
 }
 /*Media Query para la vista desde tablet*/
 @media screen and (min-width: 767px) {
     header{
-        
+        max-width: 767px;
+        position: relative;
     }
     #hamburguesa li a{
         display: none;
@@ -206,17 +206,14 @@ nav:target #hamburguesa li:last-child {
     }
 
     #barra li {
-        width: 130px;
-        margin: 0 1em;
+        width: 120px;
         text-align: center;
     }
     #barra li a {
         background: none;
-        width: 70px;
-
     }
     .banner{
-        width: 95vw;
+        width: 100%;
     }
     .banner > div{
         background: url(../imagenes/banner_t.jpg) no-repeat center center;
@@ -257,27 +254,60 @@ nav:target #hamburguesa li:last-child {
     display: block;
     height: 1.5em;
 } */
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1024px) {
+    header{
+        max-width: 1024px;
+        margin: auto;
+    }
+    h1{
+        float: left;
+        width: 100px;
+    }
     .banner{
-        width: 90vw;
+        width: 1024px;
     }
     .banner > div{
         background: url(../imagenes/banner_pc.jpg) no-repeat center center;
-        height: calc((100vw - 2em) * 0.474095796);
+        height: calc((992px - 2em) * 0.474095796);
         background-size: cover;
     }
     .trabajando > article{
-        width: 20vw;
-        padding: 4em 1em;
-        margin: 1em;
-    }
-    .projectos > article{
-        width: 24vw;
+        width: 21%;
         margin: 1em;
     }
     .boton{
-        width: 10vw;
-        
+        width: 50%;
     }
+    .projectos h3 {
+        font-size: 20px;
+        padding-top: 0.5em;
+    }
+    #menu{
+        display: inline-block;
+        width: 100%;
+        vertical-align: top;
+    }
+    #barra{
+        position: static;
+        height: auto;
+        text-align: right;
+        background: none;
+        margin: 0 auto;
+    }
+    #barra li {
+        margin: 0 auto;
+        text-align: center;
+    }
+    #hamburguesa{
+        display: none;
+    }
+    #trabajo, #projectos{
+        width: 1024px;
+        margin: 0 auto;
+    }
+    #projectos > article{
+        width: 30%;
+        margin: 0.5em;
     
+    }
 }
