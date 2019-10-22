@@ -3,16 +3,24 @@
     padding: 0;
     box-sizing: border-box;
 }
-body{
+a{
+    text-decoration: none;
+    color:#ffffff;
+}
+body {
     font-family: 'Montserrat', sans-serif;
 }
-
+html{
+    scroll-behavior: smooth;
+}
 header {
     background: #ffffff;
     height: 4em;
     line-height: 4em;
     text-align: center;
     color: white;
+    position: sticky;
+    top: 0;
 }
 nav {
     position: absolute;
@@ -20,7 +28,7 @@ nav {
     left: 0;
     width: 100%;
 }
-h1{
+h1 {
     background: url(../imagenes/logo.png) no-repeat center center;
     font-size: 0;
 }
@@ -53,6 +61,10 @@ section {
     transition: 0.6s;
     border-radius: 0.5em;
 }
+.trabajando figcaption{
+    padding: 0.5em 0;
+    margin:0 auto; 
+}
 .projectos{
     background: #fffdf4;
     text-align: center;
@@ -62,9 +74,16 @@ section {
     box-shadow: #cecece 0 0 2px 0px;
     margin: 1.5em auto;
     text-align: center;
+    overflow: hidden;
 }
 .projectos img{
     width: 100%;
+}
+.projectos h2, .trabajando h2{
+    font-size: 1.8em;
+    width: 85vw;
+    margin: 0 auto;
+    color: #333333;
 }
 .projectos h3{
     font-size: 1.4em;
@@ -72,7 +91,7 @@ section {
 }
 .projectos figcaption{
     padding: 0.8em;
-}
+
 }
 #hamburguesa li {
     list-style: none;
@@ -96,7 +115,7 @@ section {
 /* En este ejemplo cambiamos el efecto de apertura, en vez de manejar el left cambiamos el alto de la caja, cuando está cerrada la barra su alto será cero y cuando está abierta el mismo alto que tenía en el ejemplo anterior. Lo único que tenemos que tener en cuentra es que si la ul tiene alto cero los botones se verán igual excediendo el alto de la caja, por lo que los ocultamos con la propiedad overflow. */
 
 nav:target #barra {
-    height: calc(100vh - 2em);
+    height: calc(100vh - 8em);
 }
 
 nav:target #hamburguesa li:first-child {
@@ -118,8 +137,8 @@ nav:target #hamburguesa li:last-child {
 }
 #barra li {
     list-style: none;
-    margin: 1em;
-    width: 90%;
+    margin: 0.5em;
+    width: 90vw;
     display: inline-block;
 }
 
@@ -129,7 +148,7 @@ nav:target #hamburguesa li:last-child {
     background: #eef0c9;
     color: #5c8b3b;
     text-align: center;
-    font-size: 16px;
+    font-size: 20px;
     line-height: 3em;
     border-radius: 10px;
     font-weight: 500;
@@ -148,9 +167,53 @@ nav:target #hamburguesa li:last-child {
     height: calc((100vw - 2em) * 0.903966);
     background-size: cover;
 }
+.boton{
+    font-size: 1.2em;
+    font-weight: 600;
+    padding: 0.7em;
+    width: 30vw;
+    color: white;
+    background: #00F260;
+    background: -webkit-linear-gradient(to right, #0575E6, #00F260);
+    background: linear-gradient(to right, #0575E6, #00F260);
+    margin: 1em auto;
+}
+.boton:hover{
+    cursor: pointer;
+    filter: hue-rotate(90deg);
+    /* filter: contrast(175%) brightness(3%); */
+}
+/*Media Query para la vista desde tablet*/
 @media screen and (min-width: 767px) {
+    header{
+        
+    }
     #hamburguesa li a{
         display: none;
+    }
+
+    #menu{
+        display: inline-block;
+        width: 70%;
+        vertical-align: middle;
+    }
+
+    #barra {
+        position: static;
+        height: auto;
+        text-align: right;
+        background: none;
+    }
+
+    #barra li {
+        width: 130px;
+        margin: 0 1em;
+        text-align: center;
+    }
+    #barra li a {
+        background: none;
+        width: 70px;
+
     }
     .banner{
         width: 95vw;
@@ -159,6 +222,32 @@ nav:target #hamburguesa li:last-child {
         background: url(../imagenes/banner_t.jpg) no-repeat center center;
         height: calc((100vw - 2em) * 0.5645371577);
         background-size: cover;
+    }
+    .trabajando, .projectos{
+        display:flex;
+        justify-content: center;
+        align-items: start;
+        flex-wrap: wrap;
+        
+    }
+    .trabajando > article{
+        width: 41vw;
+        padding: 1em;
+        margin: 1em;
+    }
+    .projectos > article{
+        width: 41vw;
+        margin: 1em;
+    }
+    .projectos h2, .trabajando h2{
+        font-size: 1.5em;
+        margin:0.3em auto;
+    }
+    .boton{
+        width: 20vw;
+        float: right;
+        margin: 0;
+        margin-top: 1em;
     }
 }
 /* @media screen and (max-width: 991px){
@@ -177,4 +266,18 @@ nav:target #hamburguesa li:last-child {
         height: calc((100vw - 2em) * 0.474095796);
         background-size: cover;
     }
+    .trabajando > article{
+        width: 20vw;
+        padding: 4em 1em;
+        margin: 1em;
+    }
+    .projectos > article{
+        width: 24vw;
+        margin: 1em;
+    }
+    .boton{
+        width: 10vw;
+        
+    }
+    
 }
