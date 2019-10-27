@@ -22,6 +22,10 @@ header {
     position: sticky;
     top: 0;
 }
+header > a{
+    width: 100px;
+    height: 65px;
+}
 nav {
     position: absolute;
     top: 0;
@@ -115,7 +119,7 @@ section {
 /* En este ejemplo cambiamos el efecto de apertura, en vez de manejar el left cambiamos el alto de la caja, cuando está cerrada la barra su alto será cero y cuando está abierta el mismo alto que tenía en el ejemplo anterior. Lo único que tenemos que tener en cuentra es que si la ul tiene alto cero los botones se verán igual excediendo el alto de la caja, por lo que los ocultamos con la propiedad overflow. */
 
 nav:target #barra {
-    height: calc(100vh - 8em);
+    height: calc(100vh - 2em);
 }
 
 nav:target #hamburguesa li:first-child {
@@ -184,17 +188,31 @@ nav:target #hamburguesa li:last-child {
 }
 /*Media Query para la vista desde tablet*/
 @media screen and (min-width: 767px) {
-    header{
+    h1{
+        width: 100px;
+        height: 65px;
+    }
+    body{
         max-width: 767px;
+        margin:0 auto;
+    }
+
+    header{
+        width: 100%;
         position: relative;
     }
-    #hamburguesa li a{
+    #barra li a:hover{
+        background: none;
+        color: #8ad05a;
+        text-decoration: underline;
+    }
+    #hamburguesa{
         display: none;
     }
 
     #menu{
         display: inline-block;
-        width: 70%;
+        width: 100%;
         vertical-align: middle;
     }
 
@@ -203,11 +221,13 @@ nav:target #hamburguesa li:last-child {
         height: auto;
         text-align: right;
         background: none;
+        margin:0 auto;
     }
 
     #barra li {
-        width: 120px;
+        width: 99px;
         text-align: center;
+        margin: 0 auto;
     }
     #barra li a {
         background: none;
@@ -247,21 +267,10 @@ nav:target #hamburguesa li:last-child {
         margin-top: 1em;
     }
 }
-/* @media screen and (max-width: 991px){
-#hamburguesa li a {
-    background: url(img/menu.png) no-repeat center center;
-    background-size: cover;
-    display: block;
-    height: 1.5em;
-} */
 @media screen and (min-width: 1024px) {
-    header{
+    body{
         max-width: 1024px;
         margin: auto;
-    }
-    h1{
-        float: left;
-        width: 100px;
     }
     .banner{
         width: 1024px;
@@ -295,11 +304,9 @@ nav:target #hamburguesa li:last-child {
         margin: 0 auto;
     }
     #barra li {
-        margin: 0 auto;
+        width: 110px;
+        margin: 0 5px;
         text-align: center;
-    }
-    #hamburguesa{
-        display: none;
     }
     #trabajo, #projectos{
         width: 1024px;
