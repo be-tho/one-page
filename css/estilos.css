@@ -19,7 +19,6 @@ header {
     line-height: 4em;
     text-align: center;
     color: white;
-    position: sticky;
     top: 0;
 }
 header > a{
