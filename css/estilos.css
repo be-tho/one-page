@@ -435,6 +435,48 @@ background-image: linear-gradient(to left bottom, #FB0477 42%, #40027E 100%);
 .gracias img{
 	margin-bottom: 300px; 
 }
+.sub-contacto{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 90vw;
+    margin: 0 auto;
+    font-size: 1.2em;
+    color: white;
+}
+.sub-contacto > div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+.sub-contacto > div:nth-child(1){
+    align-items: flex-start;
+    background: #57cbe1;
+    width: 100%;
+    padding: 25px;
+    justify-content: flex-start;
+}
+.sub-contacto > div:nth-child(2){
+    align-items: flex-start;
+    background: #62e0c1;
+    width: 100%;
+    padding: 25px;
+    justify-content: flex-start;
+}
+.sub-contacto > div:nth-child(3){
+    align-items: flex-start;
+    background: #7fe092;
+    width: 100%;
+    padding: 25px;
+    justify-content: flex-start;
+}
+.sub-contacto > div > div{
+    margin: 0 1em;
+}
+
 /* @media screen and (min-width: 480px) {
 body{
     background: red;
