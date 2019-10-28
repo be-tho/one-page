@@ -194,17 +194,16 @@ iframe {
     text-align: center;
     font-size: 1em;
 }
-.porque p{
+.texto-porque p{
     line-height: 1.8em;
 }
-.porque > h2{
-    margin-top: 0.5em;
+.texto-porque > h2{
     font-size: 1.8em;
     color:#57cbe1;
 }
-.porque > h3{
+.texto-porque > h3{
     margin-bottom: 0.5em;
-    color: #3c9734;
+    color:#62e0c1;
     letter-spacing: -1px;
 }
 
@@ -475,7 +474,31 @@ background-image: linear-gradient(to left bottom, #FB0477 42%, #40027E 100%);
 #sub-contacto > div > div{
     margin: 0 1em;
 }
-
+.cont-datos{
+    width: 90vw;
+    background:#003f8c;
+    margin: 0 auto;
+}
+.datos{
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    text-align: center;
+}
+.datos > li{
+    width: 100%;
+    padding: 1em 0;
+    color: white;
+    text-decoration: none;
+    list-style: none;
+}
+.texto-porque{
+    padding: 2em;
+    background: #003f8c;
+    color: white;
+    border-radius: 15px;
+    margin: 20px 0;
+}
 /* @media screen and (min-width: 480px) {
 body{
     background: red;
@@ -598,6 +621,9 @@ body{
     .sub-contacto{
         width: 80%;
     }
+    .cont-datos{
+        width: 100%;
+    }
 }
 @media screen and (min-width: 1024px) {
     body{
@@ -645,7 +671,7 @@ body{
         vertical-align: top;
     }
     #contacto {
-        padding: 40px 0;
+        padding: 20px 0 40px 0;
     }
     #menu{
         display: inline-block;
@@ -685,5 +711,13 @@ body{
         padding: 15px;
         align-items: center;
         justify-content: space-around;
+    }
+    .formulario{
+        width: 100%;
+        max-width: 600px;
+        padding: 2% 2em;
+    }
+    .datos > li{
+        padding: 10px 0;
     }
 }
