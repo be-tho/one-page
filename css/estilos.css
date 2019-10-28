@@ -211,7 +211,6 @@ iframe {
 }
 
 .videoresponsive{
-    width: 80vw;
     height: calc(80vw * 315 / 560);
     max-width: 568px;
     max-height: 315px;
@@ -219,7 +218,18 @@ iframe {
     margin: auto;
 }
 .cont-video{
-    padding: 0;
+    width: 90vw;
+    padding: 0 1.25em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+}
+.cont-video:first-child{
+    padding-top: 2em;
+}
+.cont-video > div{
+    margin-bottom: 2em;
 }
 .cont-video  h2{
     color: #57cbe1;
@@ -227,7 +237,10 @@ iframe {
     margin: 0.5em 0;
 }
 .cont-video p{
-    padding: 0.5em 0.5em 0 0.5em;
+    background: #7fe092;
+    color: #333333;
+    padding: 0.5em;
+    border-radius: 0 0 10px 10px;
 }
 #equipo{
     background: #fafafa;
@@ -235,14 +248,21 @@ iframe {
 #equipo h2, #equipo h3{
     text-align: center;
 }
-#equipo > article {
+.cont-articulos{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.cont-articulos > article {
     padding: 1.8em 1em;
     box-shadow: 0 0 10px 0 rgba(136, 136, 136, 0.1);
     margin-bottom: 2em;
 }
-#equipo article:first-of-type{
+.cont-articulos article:first-of-type{
     margin-top: 1em;
 }
+
 #equipo img{
     width: 100%;
     transition: all 0.2s ease;
@@ -340,6 +360,40 @@ body{
     #barra li a {
         background: none;
     }
+    .porque{
+        text-align: left;
+    }
+    .cont-video{
+        align-items: flex-start;
+        width: 100%;
+    }
+    .cont-video > div{
+        width: 45%;
+    }
+    .cont-video h2{
+        font-size: 20px;
+    }
+    .videoresponsive{
+        /* height: calc(767px * 240 / 413);
+        max-width: 413px;
+        max-height: 240px; */
+        height: calc(767px * 179 / 400);
+        max-width: 400px;
+        max-height: 179px;
+    }
+    .cont-articulos article:first-of-type {
+        margin-top: 0;
+    }
+    .cont-articulos{
+        justify-content: space-around;
+        flex-direction: row;
+        margin-top: 20px;
+    }
+    .cont-articulos > article{
+        width: 45%;
+        display: inline-block;
+        vertical-align: top;
+    }
     .banner{
         width: 100%;
     }
@@ -398,6 +452,27 @@ body{
     .projectos h3 {
         font-size: 20px;
         padding-top: 0.5em;
+    }
+    .videoresponsive{
+        height: calc(1024px * 166 / 400);
+        max-width: 400px;
+        max-height: 166px;
+    }
+    .cont-video{
+        text-align: center;
+    }
+    .cont-video > div {
+        width: 30%;
+    }
+    .cont-video p{
+        padding: 10px;
+        border-radius: 0 0 10px 10px;
+        text-align: left;
+    }
+    .cont-articulos > article{
+        width: 30%;
+        display: inline-block;
+        vertical-align: top;
     }
     #menu{
         display: inline-block;
