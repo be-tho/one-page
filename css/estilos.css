@@ -309,6 +309,132 @@ iframe {
     border-left: 1px solid #c1c0c0;
     padding-left: 1em;
 }
+#contacto{
+    text-align: center;
+    margin:0 auto;
+}
+#contacto h3{
+    margin-bottom: 1em;
+}
+#contacto h2{
+    color:#7fe092;
+}
+.formulario{
+    display: flex;
+    align-items: center;
+    width: 90vw;
+    margin: auto;
+    max-width: 22em;
+    position: relative;
+    padding: 6% 2em;
+    box-sizing: border-box;
+    color: #FFF;
+    background: white;
+    background-clip: padding-box;
+    border: solid 5px transparent;
+    border-radius: 1em;
+    text-align: left;
+}
+.formulario::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    margin: -5px;
+    border-radius: inherit;
+    background: #7fe2c0;
+}
+/* .nombre {
+    padding: 10px;
+    position: relative;
+    height: 3.5em;
+    border: 2px solid #67AAE3;
+    border-radius: 1em;
+} */
+.formulario legend {
+    color: #67AAE3;
+    font-size: .9em;
+}
+.formulario input{
+    border: none;
+}
+.formulario input:focus {
+    outline: 0;
+}
+.formulario>legend {
+    font-size: 0;
+}
+.formulario > fieldset{
+    margin: 1em 0; 
+    padding: 10px;
+    position: relative;
+    height: 3.5em;
+    border: 2px solid #67AAE3;
+    border-radius: 1em;
+}
+.areadetexto{
+    height: 8em;
+}
+.areadetexto textarea{
+    padding: .8em;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #67AAE3;
+    border-radius: 1em;
+}
+.enviar {
+    cursor: pointer;
+    background-color: #57cbe1;
+    text-decoration: none;
+    text-align: center;
+    padding: 0.5em 1.8em;
+    border-radius: .8em;
+    color: white;
+    display: block;
+    width: 112px;
+    margin-top: 1.5em;
+}
+.enviar:hover{
+    background-color: #57e190;
+}
+/* ESTILOS DE GRACIAS.HTML*/
+#cont-gracias{
+	background-image: -webkit-gradient(
+	linear,
+	right top,
+	left bottom,
+	color-stop(0.42, #FB0477),
+	color-stop(1, #40027E)
+);
+background-image: -o-linear-gradient(left bottom, #FB0477 42%, #40027E 100%);
+background-image: -moz-linear-gradient(left bottom, #FB0477 42%, #40027E 100%);
+background-image: -webkit-linear-gradient(left bottom, #FB0477 42%, #40027E 100%);
+background-image: -ms-linear-gradient(left bottom, #FB0477 42%, #40027E 100%);
+background-image: linear-gradient(to left bottom, #FB0477 42%, #40027E 100%);
+}
+.gracias{
+	margin:0 auto;
+	text-align: center;
+	height: auto;
+	padding: 50px 0;
+}
+.gracias h1{
+    color: #fff;
+    background: none !important;
+}
+.gracias span{
+	color:#fdf704;
+}
+.gracias h2{
+	color: #fff;
+	padding: 20px 0;
+}
+.gracias img{
+	margin-bottom: 300px; 
+}
 /* @media screen and (min-width: 480px) {
 body{
     background: red;
