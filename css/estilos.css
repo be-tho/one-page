@@ -361,6 +361,7 @@ body{
     }
     .porque{
         text-align: left;
+        padding: 0 2em;
     }
     .cont-video{
         align-items: flex-start;
