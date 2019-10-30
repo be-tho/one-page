@@ -356,17 +356,18 @@ iframe {
     border: 2px solid #67AAE3;
     border-radius: 1em;
 } */
-.formulario legend {
+.formulario label, legend {
     color: #67AAE3;
     font-size: .9em;
 }
 .formulario input{
     border: none;
 }
-.formulario input:focus {
+.formulario input:focus, .formulario textarea:focus {
     outline: 0;
 }
-.formulario>legend {
+
+.formulario > label, legend {
     font-size: 0;
 }
 .formulario > fieldset{
@@ -386,6 +387,9 @@ iframe {
     height: 100%;
     border: 2px solid #67AAE3;
     border-radius: 1em;
+}
+.nombre:hover, .apellido:hover, .correo:hover{
+    border: 2px solid #7fe2c0;
 }
 .enviar {
     cursor: pointer;
