@@ -1,0 +1,5 @@
+alumno: Albert Villarroel
+docente: Omar Toyos
+Materia: Interacción con Dispositivos Mobiles
+Comisión: DWN2A
+fecha de entrega: 01/11/19
