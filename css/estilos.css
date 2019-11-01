@@ -505,11 +505,6 @@ background-image: linear-gradient(to left bottom, #FB0477 42%, #40027E 100%);
     border-radius: 15px;
     margin: 20px 0;
 }
-/* @media screen and (min-width: 480px) {
-body{
-    background: red;
-} */
-/*Media Query para la vista desde tablet*/
 @media screen and (min-width: 767px) {
     h1{
         width: 100px;
