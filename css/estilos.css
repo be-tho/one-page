@@ -289,7 +289,7 @@ iframe {
     border-bottom: 1px solid #c1c0c0;
 }
 .tel{
-    background: url(../imagenes/recursos/phone.svg);
+    background: url(../imagenes/recursos/phone.svg) no-repeat;
     width: 16px;
     height: 16px;
     margin-right: 1em;
@@ -298,7 +298,7 @@ iframe {
     border-right: 3px solid red;
 }
 .email{
-    background: url(../imagenes/recursos/mail.svg);
+    background: url(../imagenes/recursos/mail.svg) no-repeat;
     width: 16px;
     height: 16px;
     margin-right: 1em;
@@ -733,7 +733,7 @@ background-image: linear-gradient(to left bottom, #FB0477 42%, #40027E 100%);
         text-align: left;
     }
     .cont-articulos > article{
-        width: 30%;
+        width: 32%;
         display: inline-block;
         vertical-align: top;
     }
