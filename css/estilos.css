@@ -64,7 +64,7 @@ section {
     transition: 0.6s;
     border-radius: 0.5em;
 }
-.trabajando figcaption{
+.trabajando p{
     padding: 0.5em 0;
     margin:0 auto; 
 }
@@ -92,7 +92,7 @@ section {
     font-size: 1.4em;
     padding-top: 0.5em;
 }
-.projectos figcaption{
+.projectos p{
     padding: 0.8em;
 
 }
@@ -276,8 +276,11 @@ iframe {
 .nombre-voluntario h3, .nombre-voluntario p{
     text-align: left !important;
 }
-#equipo figcaption{
+#equipo p{
     padding: 1em 0;
+}
+.tel~p, .email~p{ 
+    padding-left: 1em !important;
 }
 .icon-style-list > li{
     display: flex;
@@ -505,6 +508,64 @@ background-image: linear-gradient(to left bottom, #FB0477 42%, #40027E 100%);
     border-radius: 15px;
     margin: 20px 0;
 }
+#redes{
+    width: 90vw;
+    margin: 0 auto;
+    text-align: center;
+    padding: 2em 0;
+    font-weight: 600;
+}
+.redes-texto > li{
+    padding-bottom: 0.5em;
+}
+.redes-texto li:nth-child(2){
+    padding-bottom: 0;
+}
+#redes li{
+    list-style: none;
+}
+.sprite{
+	display: flex;
+    padding: 0;
+    width: 200px;
+    margin: 0 auto;
+}
+.sprite li a{
+	text-decoration: none;
+    display: inline-block;
+    background-repeat: no-repeat;
+    font-size: 0px;
+    margin-right: 10px;
+    background-position: left bottom;
+    width: 42px;
+    height: 41px;
+    background-image: url(../imagenes/recursos/sprite.png);
+    transition: all 1s;
+    BORDER-RADIUS: 50%;
+
+}
+.sprite li:nth-child(1) a:hover{
+	background-position: left center;
+	transition:all 1s;
+}
+.sprite li:nth-child(2) a{
+	background-position: -126px bottom;
+}
+.sprite li:nth-child(2) a:hover{
+	background-position: -126px center;
+}
+.sprite li:nth-child(3) a{
+	background-position: -337px bottom;
+}
+.sprite li:nth-child(3) a:hover{
+	background-position: -337px center;
+}
+.sprite li:nth-child(4) a{
+	background-position: right bottom; 
+}
+.sprite li:nth-child(4) a:hover{
+    background-position: right center; 
+}
 @media screen and (min-width: 767px) {
     h1{
         width: 100px;
@@ -549,6 +610,11 @@ background-image: linear-gradient(to left bottom, #FB0477 42%, #40027E 100%);
     }
     #barra li a {
         background: none;
+    }
+    #redes{
+        width: 100%;
+        margin: 0 auto;
+        padding: 30px 0;
     }
     .porque{
         text-align: left;
