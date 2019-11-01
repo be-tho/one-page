@@ -251,11 +251,13 @@ iframe {
     justify-content: center;
     flex-direction: column;
     flex-wrap: wrap;
+    align-items: center;
 }
 .cont-articulos > article {
     padding: 1.8em 1em;
     box-shadow: 0 0 10px 0 rgba(136, 136, 136, 0.1);
     margin-bottom: 2em;
+    width: 90vw;
 }
 .cont-articulos article:first-of-type{
     margin-top: 1em;
