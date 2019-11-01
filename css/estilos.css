@@ -210,7 +210,7 @@ iframe {
 
 .videoresponsive{
     height: calc(80vw * 315 / 560);
-    max-width: 568px;
+    max-width: 560px;
     max-height: 315px;
     border: 5px solid #3c9734;
     margin: auto;
